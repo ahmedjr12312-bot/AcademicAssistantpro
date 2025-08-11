@@ -1,3 +1,15 @@
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import android.widget.ListView;
+import android.widget.ArrayAdapter;
+import android.widget.Toast;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.EditText;
+import androidx.appcompat.app.AlertDialog;
+import com.example.academicassistant.data.AppDatabase;  // استيراد AppDatabase
+import com.example.academicassistant.data.Course;      // استيراد Course
+
 public class ManageCoursesActivity extends AppCompatActivity {
     private AppDatabase db; 
     private ListView list;
