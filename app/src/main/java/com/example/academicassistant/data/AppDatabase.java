@@ -1,19 +1,21 @@
 package com.example.academicassistant.data;
 
 import androidx.room.Database;
-import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import android.content.Context;
 
-@Database(entities = {Course.class}, version = 1)
+@Database(entities = {Course.class, Lecture.class, TaskItem.class, NoteItem.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase INSTANCE;
 
-    public abstract CourseDao courseDao();
+    public abstract CourseDao courseDao();  // موجودة مسبقًا
+    public abstract LectureDao lectureDao();  // إضافة LectureDao
+    public abstract TaskDao taskDao();  // إضافة TaskDao
+    public abstract NoteDao noteDao();  // إضافة NoteDao
 
-    public static synchronized AppDatabase get(Context context) {
+    // إنشاء الدالة التي ترجع قاعدة البيانات
+    public static synchronized AppDatabase getInstance(Context context) {
         if (INSTANCE == null) {
-            INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "aa.db")
+            INSTANCE = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "academic_assistant_db")
                     .allowMainThreadQueries()
                     .build();
         }
