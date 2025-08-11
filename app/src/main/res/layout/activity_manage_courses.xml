@@ -4,19 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- ListView لعرض المقررات -->
+    <!-- قائمة لعرض المقررات -->
     <ListView
         android:id="@+id/list_courses"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/fab_add_course"/>
 
-    <!-- FloatingActionButton لإضافة مقرر -->
+    <!-- زر إضافة مقرر في الأعلى -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
         app:srcCompat="@android:drawable/ic_input_add"
