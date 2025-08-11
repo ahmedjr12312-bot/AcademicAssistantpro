@@ -18,13 +18,17 @@ public class ManageCoursesActivity extends AppCompatActivity {
     private ListView list;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_courses);
+        
         db = AppDatabase.get(this);
         list = findViewById(R.id.list_courses);
 
+        // الضغط على الزر لإضافة مقرر جديد
         findViewById(R.id.fab_add_course).setOnClickListener(v -> addDialog());
+        
+        // تحديث قائمة المقررات
         refresh();
     }
 
