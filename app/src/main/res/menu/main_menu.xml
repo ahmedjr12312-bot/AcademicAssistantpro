@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_courses" android:title="إدارة المقررات"/>
+    <item android:id="@+id/menu_share_export" android:title="مشاركة (تصدير JSON)"/>
+    <item android:id="@+id/menu_share_import" android:title="استيراد JSON"/>
+</menu>

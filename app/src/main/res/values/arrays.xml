@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="days_ar">
+        <item>الإثنين</item><item>الثلاثاء</item><item>الأربعاء</item><item>الخميس</item>
+        <item>الجمعة</item><item>السبت</item><item>الأحد</item>
+    </string-array>
+    <string-array name="task_status">
+        <item>NEW</item><item>IN_PROGRESS</item><item>DONE</item>
+    </string-array>
+</resources>
